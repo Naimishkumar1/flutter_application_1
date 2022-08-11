@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Pages/HomePage.dart';
 import 'package:flutter_application_1/Pages/loginPage.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,13 +15,15 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.pink),
+      theme: ThemeData(
+          primarySwatch: Colors.pink,
+          primaryTextTheme: GoogleFonts.latoTextTheme()),
       routes: {
-        "/":(context)=> LoginPage(),
-        "/login":(context) =>HomePage(),
+        "/": (context) => LoginPage(),
+        "/login": (context) => HomePage(),
       },
-    ) ;
+    );
   }
 }
